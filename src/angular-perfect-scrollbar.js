@@ -1,3 +1,5 @@
+var Ps = typeof(require) !== 'undefined' ? require('perfect-scrollbar') : window.Ps;
+
 angular.module('perfect_scrollbar', []).directive('perfectScrollbar',
   ['$parse', '$window', function($parse, $window) {
 
@@ -37,7 +39,7 @@ angular.module('perfect_scrollbar', []).directive('perfectScrollbar',
         }
 
         // This is necessary when you don't watch anything with the scrollbar
-        $elem.bind('mouseenter', function() {update('mouseenter')});
+        $elem.bind('mouseenter', function() {update('mouseenter');});
 
         // Possible future improvement - check the type here and use the appropriate watch for non-arrays
         if ($attr.refreshOnChange) {
