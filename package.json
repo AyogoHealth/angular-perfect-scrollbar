@@ -2,10 +2,13 @@
   "name": "angular-perfect-scrollbar",
   "version": "1.0.0",
   "private": false,
+  "repository": "https://github.com/ayogohealth/angular-perfect-scrollbar",
+  "main": "index.js",
   "scripts": {
     "test": "grunt"
   },
   "dependencies": {
+    "perfect-scrollbar": "^0.6.1"
   },
   "devDependencies": {
     "grunt": "^0.4.2",
