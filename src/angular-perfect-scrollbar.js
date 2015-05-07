@@ -28,26 +28,10 @@ angular.module('perfect_scrollbar', []).directive('perfectScrollbar',
 
         $scope.$evalAsync(function() {
           Ps.initialize(el, options);
-          var onScrollHandler = $parse($attr.onScroll);
-          $elem.scroll(function(){
-            var scrollTop = $elem.scrollTop();
-            var scrollHeight = $elem.prop('scrollHeight') - $elem.height();
-            $scope.$apply(function() {
-              onScrollHandler($scope, {
-                scrollTop: scrollTop,
-                scrollHeight: scrollHeight
-              })
-            })
-          });
         });
 
         function update(event) {
           $scope.$evalAsync(function() {
-            if ($attr.scrollDown == 'true' && event != 'mouseenter') {
-              setTimeout(function () {
-                $($elem).scrollTop($($elem).prop("scrollHeight"));
-              }, 100);
-            }
             Ps.update(el);
           });
         }
