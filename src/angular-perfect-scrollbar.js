@@ -5,7 +5,7 @@ angular.module('perfect_scrollbar', []).directive('perfectScrollbar',
 
     //Ps options to test against when creating options{}
     var psOptions = [
-      'wheelSpeed', 'wheelPropagation', 'minScrollbarLength', 'useBothWheelAxes',
+      'wheelSpeed', 'wheelPropagation', 'minScrollbarLength', 'maxScrollbarLength', 'useBothWheelAxes',
       'useKeyboard', 'suppressScrollX', 'suppressScrollY', 'scrollXMarginOffset',
       'scrollYMarginOffset', 'includePadding'//, 'onScroll', 'scrollDown'
     ];
